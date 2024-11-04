@@ -1,6 +1,6 @@
 Sensible data is redacted for privacy.
 * Ruby version 3.2.2
-* Custom installed gems: devise 4.9, pagy 8.0, sassc-rails
+* Custom installed gems: `devise 4.9`, `pagy 8.0`, `sassc-rails`
 * run `bundle install` to install required gems in the Gemfile
 * run `yarn install`
 * edit `config/database.yml` to setup database credentials for MySQL
