@@ -1,0 +1,49 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  battle_time: 2024-04-06 21:24:16
+  game_mode: MyString
+  p1_tag: MyString
+  p1_trophies: 1
+  p1_best_trophies: 1
+  p1_wins: 1
+  p1_losses: 1
+  p1_battle_count: 1
+  p1_crowns: 1
+  p1_elixir_leaked: 1.5
+  p1_cards: 
+  p1_support_cards: 
+  p2_tag: MyString
+  p2_trophies: 1
+  p2_best_trophies: 1
+  p2_wins: 1
+  p2_losses: 1
+  p2_battle_count: 1
+  p2_crowns: 1
+  p2_elixir_leaked: 1.5
+  p2_cards: 
+  p2_support_cards: 
+
+two:
+  battle_time: 2024-04-06 21:24:16
+  game_mode: MyString
+  p1_tag: MyString
+  p1_trophies: 1
+  p1_best_trophies: 1
+  p1_wins: 1
+  p1_losses: 1
+  p1_battle_count: 1
+  p1_crowns: 1
+  p1_elixir_leaked: 1.5
+  p1_cards: 
+  p1_support_cards: 
+  p2_tag: MyString
+  p2_trophies: 1
+  p2_best_trophies: 1
+  p2_wins: 1
+  p2_losses: 1
+  p2_battle_count: 1
+  p2_crowns: 1
+  p2_elixir_leaked: 1.5
+  p2_cards: 
+  p2_support_cards: 
