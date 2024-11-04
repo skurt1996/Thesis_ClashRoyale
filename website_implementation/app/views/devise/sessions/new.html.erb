@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <h2 class="text-white bangers-regular text-center">Log in</h2>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "text-white" }) do |f| %>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center">
+          <div class="text-center">
+            <%= f.label :email, class: "form-label text-white" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center">
+          <div class="text-center">
+            <%= f.label :password, class: "form-label text-white" %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field text-center">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, class: "text-white" %>
+          </div>
+        <% end %>
+
+        <div class="actions text-center mt-4">
+          <%= f.submit "Log in", class: "btn btn-primary btn-lg bangers-regular bg-black border-0 btn-custom" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="dropdown text-center mt-2" data-controller="locale">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="true">
+        <%= I18n.locale == :en ? 'EN' : 'DE' %>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a href="#" class="dropdown-item" id="de" data-locale-target="localeItem" data-action="click->locale#changeLocale">DE</a></li>
+        <!-- <li><hr class="dropdown-divider"></li> -->
+        <li><a href="#" class="dropdown-item" id="en" data-locale-target="localeItem" data-action="click->locale#changeLocale">EN</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center mt-2">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<turbo-frame id="modal" target="_top">
+  <!-- Modal -->
+  <!-- Modal Content -->
+  <div class="modal-content">
+    <span class="close">&times</span>
+    <h2 class="form-title">New Battle</h2>
+    <%= form_with(model: @battle, url: battles_path, method: :post) do |form| %>
+      <div class="form-container">
+        <%# Battle Time %>
+        <div class="form-group">
+          <%= form.label :battle_time, class: "form-label" %>
+          <%= form.datetime_field :battle_time, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:battle_time).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Game Mode %>
+        <div class="form-group">
+          <%= form.label :game_mode, class: "form-label" %>
+          <%= form.select :game_mode, options_for_select(["Ladder", "Ranked1v1"]), {}, class: "form-select" %>
+          <% @battle.errors.full_messages_for(:game_mode).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 1 Crowns %>
+        <div class="form-group">
+          <%= form.label "Player 1 Crowns", class: "form-label" %>
+          <%= form.select :p1_crowns, options_for_select([["0", 0], ["1", 1], ["2", 2], ["3", 3]]), {}, class: "form-select" %>
+          <% @battle.errors.full_messages_for(:p1_crowns).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 2 Crowns %>
+        <div class="form-group">
+          <%= form.label "Player 2 Crowns", class: "form-label" %>
+          <%= form.select :p2_crowns, options_for_select([["0", 0], ["1", 1], ["2", 2], ["3", 3]]), {}, class: "form-select" %>
+          <% @battle.errors.full_messages_for(:p2_crowns).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 1 Trophies %>
+        <div class="form-group">
+          <%= form.label "Player 1 Trophies", class: "form-label" %>
+          <%= form.number_field :p1_trophies, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p1_trophies).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 2 Trophies %>
+        <div class="form-group">
+          <%= form.label "Player 2 Trophies", class: "form-label" %>
+          <%= form.number_field :p2_trophies, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p2_trophies).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 1 Best Trophies %>
+        <div class="form-group">
+          <%= form.label "Player 1 Best Trophies", class: "form-label" %>
+          <%= form.number_field :p1_best_trophies, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p1_best_trophies).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 2 Best Trophies %>
+        <div class="form-group">
+          <%= form.label "Player 2 Best Trophies", class: "form-label" %>
+          <%= form.number_field :p2_best_trophies, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p2_best_trophies).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 1 Cards %>
+        <div class="form-group">
+          <%= form.label "Player 1 Cards", class: "form-label" %>
+          <%= form.text_field :p1_cards, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p1_cards).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Player 2 Cards %>
+        <div class="form-group">
+          <%= form.label "Player 2 Cards", class: "form-label" %>
+          <%= form.text_field :p2_cards, class: "form-input" %>
+          <% @battle.errors.full_messages_for(:p2_cards).each do |error_message| %>
+            <p class="form-error"><%= error_message %></p>
+          <% end %>
+        </div>
+
+        <%# Button %>
+        <div class="form-group">
+          <%= form.submit "Create Battle", id: "modal-trigger", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</turbo-frame>

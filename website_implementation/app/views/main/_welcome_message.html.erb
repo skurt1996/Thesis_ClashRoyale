@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <h1 class="my-5 text-center welcome-heading"><%= t('welcome') %></h1>
+<% else %>
+  <h1 class="my-5 text-center welcome-heading"><%= t('welcome') %></h1>
+  <p class="my-3 text-center welcome-text"><%= t('join_us') %></p>
+<% end %>

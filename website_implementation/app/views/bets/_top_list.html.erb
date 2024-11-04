@@ -1,0 +1,21 @@
+<%= turbo_frame_tag "top_list" do %>
+  <h2 class="my-3 text-center"><%= t('top_list') %></h2>
+  <table class="table table-dark table-hover w-auto text-center mb-4" style="margin-left: auto; margin-right: auto;">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t('username') %></th>
+      <th scope="col"><%= t('correct_bets') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% users.each_with_index do |user, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= user.username %></td>
+        <td><%= user.correct_bets_count %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -1,0 +1,75 @@
+/* Footer */
+footer {
+  /* To make footer stick to bottom (+ see body stylings) */
+  margin-top: auto;
+}
+
+.footer-container {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  padding:  5px;
+  margin: 5px;
+  background-color: grey;
+  border-radius: 50%;
+}
+.social-icons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+.social-icons a:hover i {
+  color: black;
+  transition: 0.5s;
+}
+
+.footer-nav {
+  margin: 20px 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footer-nav ul li a {
+  font-family: 'RussoOne-Regular', sans-serif;
+  text-decoration: none;
+  color: #EFEFEF;
+  margin: 20px;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px){
+  .footer-nav ul{
+    flex-direction: column;
+  }
+
+  .footer-nav ul li{
+    width:100%;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .social-icons a{
+    padding: 8px;
+    margin: 4px;
+  }
+}

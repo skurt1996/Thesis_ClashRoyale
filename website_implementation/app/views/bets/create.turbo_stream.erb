@@ -1,0 +1,19 @@
+<%= turbo_stream.update "user_stats" do %>
+  <%= render partial: 'profiles/user_stats', locals: { user: @user } %>
+<% end %>
+
+<%= turbo_stream.update "battle_details" do %>
+  <%= render 'battles/battle_details', battle: @random_battle, hide_crowns: true, hide_bet: true %>
+<% end %>
+
+<%= turbo_stream.update "bet_form" do %>
+  <%= render "bets/form", bet: @random_battle %>
+<% end %>
+
+<%= turbo_stream.update "last_bet" do %>
+  <%= render "bets/last_bet", last_bet: @last_bet %>
+<% end %>
+
+<%= turbo_stream.update "top_list" do %>
+  <%= render "bets/top_list", users: @top_users %>
+<% end %>

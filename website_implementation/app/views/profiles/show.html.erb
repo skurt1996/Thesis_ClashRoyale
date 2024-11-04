@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="my-3"><%= t('user_profile') %></h1>
+  <!-- User Data etc. -->
+  <%= link_to t('edit_credentials'), edit_user_registration_path(@user), class: "adjust-width" %>
+  <!-- User Stats -->
+  <%= render partial: 'user_stats', locals: { user: @user } %>
+
+  <h2 class="my-3"><%= t('your_bets') %></h2>
+  <!-- Battles -->
+  <% if @battles.any? %>
+    <% @battles.each do |battle| %>
+      <% bet = current_user.bets.find_by(battle_id: battle.id) %>
+      <%= render partial: 'battles/battle_details', locals: { battle: battle, hide_crowns: false, hide_bet: false, bet: bet } %>
+    <% end %>
+  <% else %>
+    <p class="adjust-width"><%= t('no_bets') %></p>
+  <% end %>
+
+  <!-- Pagination -->
+  <% if @battles.any? %>
+    <%== pagy_bootstrap_combo_nav_js(@pagy) %>
+  <% end %>
+</div>

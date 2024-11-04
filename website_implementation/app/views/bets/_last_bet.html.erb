@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "last_bet" do %>
+  <div class="container my-4 center-container">
+    <% if last_bet %>
+      <% battle = last_bet.battle %>
+      <% feedback_icon = last_bet.bet == 1 && battle.p1_crowns > battle.p2_crowns || last_bet.bet == 2 && battle.p2_crowns > battle.p1_crowns ? "Thumbs-Up_King.webp" : "Crying_King.webp" %>
+      <% feedback_text = feedback_icon == "Thumbs-Up_King.webp" ? t('correct') : t('not_correct') %>
+      <p class="<%= feedback_text == t('correct') ? "correct-bet" : "wrong-bet" %>"><%= t('your_last_bet_was') %> <%= feedback_text %>.</p>
+      <span class="feedback">
+      <%= image_tag feedback_icon, alt: (feedback_icon == "Thumbs-Up_King.webp" ? t('thumbs_up_king_emote') : t('crying_king_emote')), class: "feedback-icon" %>
+    </span>
+    <% else %>
+      <p><%= t('no_previous_bets_found') %></p>
+    <% end %>
+  </div>
+<% end %>

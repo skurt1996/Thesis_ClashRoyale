@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Bangers-Regular';
+  font-style: normal;
+  font-display: swap;
+  src: url('Bangers-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RussoOne-Regular';
+  font-style: normal;
+  font-display: swap;
+  src: url('RussoOne-Regular.ttf') format('truetype');
+}
+
+.bangers-regular {
+  font-family: 'Bangers-Regular', sans-serif;
+}
+
+.russo-one-regular {
+  font-family: 'RussoOne-Regular', sans-serif;
+}

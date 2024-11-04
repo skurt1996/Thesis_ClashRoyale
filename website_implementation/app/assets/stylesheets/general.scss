@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+
+/* Background */
+body {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  /* To make Footer stick to bottom */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark Overlay */
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+h1, h2, h3 {
+  font-family: 'Bangers-Regular', sans-serif;
+  color: #EFEFEF;
+  max-width: 900px; /* Same as .battle */
+  margin: 0 auto;
+}
+
+p {
+  font-family: 'RussoOne-Regular', sans-serif;
+  color: #EFEFEF;
+}
+
+/* Not used anymore */
+.adjust-width {
+  color: #EFEFEF;
+  max-width: 900px; /* Same as .battle */
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,13 @@
+<!-- List of battles -->
+<div class="container">
+  <h1 class="my-3"><%= t('all_battles') %></h1>
+
+  <% if @battles.any? %>
+    <% @battles.each do |battle| %>
+      <%= render partial: 'battle_details', locals: { battle: battle, hide_crowns: false, hide_bet: true } %>
+    <% end %>
+  <% else %>
+    <p><%= t('no_battles_found') %></p>
+  <% end %>
+</div>
+<%== pagy_bootstrap_combo_nav_js(@pagy) %>

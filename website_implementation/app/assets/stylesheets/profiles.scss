@@ -1,0 +1,47 @@
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #EFEFEF;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  /* Same as .battle */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat {
+  padding: 5px;
+  margin: 5px;
+}
+
+.stat-name, .stat-value {
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #EFEFEF;
+}
+
+.war-shield-img {
+  height: 40px;
+}
+
+.trophy-img {
+  height: 25px;
+  margin-left: 35px;
+  margin-bottom: 7px;
+}
+
+.correct-bet,
+.wrong-bet {
+  margin: 0;
+}
+
+.correct-bet {
+  color: green;
+}
+
+.wrong-bet {
+  color: red;
+}

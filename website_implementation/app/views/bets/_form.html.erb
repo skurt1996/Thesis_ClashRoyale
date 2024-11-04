@@ -1,0 +1,15 @@
+<!-- Bet Form -->
+<% if bet.present? %>
+  <div class="container mt-4 center-container">
+    <h2><%= t('your_bet') %></h2>
+    <%= form_with(model: @bet, url: bets_path, method: :post, format: :turbo_stream) do |form| %>
+      <%= form.hidden_field :battle_id, value: bet.id %>
+      <%= form.submit t('player_1_wins'), name: "bet[bet]", value: "1", class: "btn btn-primary btn-space" %>
+      <%= form.submit t('player_2_wins'), name: "bet[bet]", value: "2", class: "btn btn-danger btc-space" %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="container my-4 center-container">
+    <p><%= t('no_more_battles') %></p>
+  </div>
+<% end %>

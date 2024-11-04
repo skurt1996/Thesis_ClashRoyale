@@ -1,0 +1,17 @@
+<footer class="bg-dark">
+  <div class="footer-container">
+    <div class="social-icons">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="footer-nav">
+      <ul>
+        <li><%= link_to t('faq'), root_path(anchor: "faq") %></li>
+        <li><%= link_to t('terms_of_use'), terms_of_use_path %></li>
+        <li><%= link_to t('privacy_policy'), privacy_policy_path %></li>
+        <li><%= link_to t('contact_us'), "#", data: { bs_toggle: "modal", bs_target: "#contactModal" } %></li>
+      </ul>
+    </div>
+  </div>
+</footer>

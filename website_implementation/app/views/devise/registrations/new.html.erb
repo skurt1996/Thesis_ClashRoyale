@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto"> <!-- Added mx-auto class for centering -->
+      <h2 class="text-white bangers-regular text-center">Sign up</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "text-white" }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center"> <!-- Added flexbox classes for centering -->
+          <div class="text-center"> <!-- Center the content inside a div -->
+            <%= f.label :username, class: "form-label" %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center"> <!-- Added flexbox classes for centering -->
+          <div class="text-center"> <!-- Center the content inside a div -->
+            <%= f.label :email, class: "form-label" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center"> <!-- Added flexbox classes for centering -->
+          <div class="text-center"> <!-- Center the content inside a div -->
+            <%= f.label :password, class: "form-label" %>
+            <% if @minimum_password_length %>
+              <br>
+              <em class="form-text text-white">(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center"> <!-- Added flexbox classes for centering -->
+          <div class="text-center"> <!-- Center the content inside a div -->
+            <%= f.label :password_confirmation, class: "form-label" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control smaller-text-field text-center" %>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <%= f.submit "Sign up", class: "btn btn-primary btn-lg bangers-regular bg-black border-0 btn-custom" %>
+        </div>
+
+        <div class="text-center mt-2 text-white"> <!-- Added text-center class to center the "Log in" link -->
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

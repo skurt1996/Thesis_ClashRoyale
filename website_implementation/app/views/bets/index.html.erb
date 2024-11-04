@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class="my-3"><%= t('your_stats') %></h1>
+  <%= turbo_frame_tag "user_stats" do %>
+    <%= render partial: 'profiles/user_stats', locals: { user: @current_user } %>
+  <% end %>
+
+  <h1 class="my-3"><%= t('place_your_bet') %></h1>
+  <% if @random_battle.present? %>
+    <%= turbo_frame_tag "battle_details" do %>
+      <%= render 'battles/battle_details', battle: @random_battle, hide_crowns: true, hide_bet: true %>
+    <% end %>
+
+    <%= turbo_frame_tag "bet_form" do %>
+      <%= render 'bets/form', bet: @random_battle %>
+    <% end %>
+  <% else %>ate
+￼ 58.
+    <div class="container my-4 center-container">
+      <p><%= t('no_more_battles') %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= turbo_frame_tag "last_bet" do %>
+  <%= render "bets/last_bet", last_bet: @last_bet %>
+<% end %>

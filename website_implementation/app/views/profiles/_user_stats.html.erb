@@ -1,0 +1,28 @@
+<%= turbo_frame_tag "user_stats" do %>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-name"><%= t('total_bet_count') %></span>
+      <br>
+      <span class="stat-icon">
+        <%= image_tag "war_shield.webp", alt: t('war_shield'), class: "war-shield-img" %>
+      </span>
+      <span class="stat-value"><%= user.bets_count %></span>
+    </div>
+    <div class="stat">
+      <span class="stat-name"><%= t('correct_bet_count') %></span>
+      <br>
+      <span class="stat-icon">
+        <%= image_tag "trophy.webp", alt: t('trophy'), class: "trophy-img" %>
+      </span>
+      <span class="stat-value"><%= user.correct_bets_count %></span>
+    </div>
+    <div class="stat">
+      <span class="stat-name"><%= t('accuracy_rate') %></span>
+      <br>
+      <span class="stat-icon">
+        <%= image_tag "war_shield.webp", alt: t('war_shield'), class: "war-shield-img" %>
+      </span>
+      <span class="stat-value"><%= accuracy_rate(user.bets_count, user.correct_bets_count) %> %</span>
+    </div>
+  </div>
+<% end %>

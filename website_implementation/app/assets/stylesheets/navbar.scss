@@ -1,0 +1,30 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav{
+  display: flex;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-link {
+  font-family: 'RussoOne-Regular', sans-serif;
+  text-decoration: none;
+  color: #EFEFEF !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Pagy Navbar for /battles and /bets */
+.pagination {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  justify-content: center;
+}

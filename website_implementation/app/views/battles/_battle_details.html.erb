@@ -1,0 +1,66 @@
+<% if battle.present? %>
+  <%= turbo_frame_tag "battle_details" do %>
+    <div class="battle">
+      <!-- Battle data: battle_time, game_mode, crowns, trophies... -->
+      <div class="text-center mb-3">
+        <span class="timestamp russo-one-regular"><%= battle.battle_time %></span>
+        <br>
+        <span class="game-mode russo-one-regular"><%= battle.game_mode %></span>
+        <br>
+      </div>
+      <div class="player-score">
+        <span class="player-left"><%= t('player_1') %></span>
+        <% unless hide_crowns %>
+          <span class="crowns score russo-one-regular"><%= battle.p1_crowns %> - <%= battle.p2_crowns %></span>
+        <% end %>
+        <span class="player-right"><%= t('player_2') %></span>
+      </div>
+      <div class="d-flex justify-content-between mb-1">
+        <span class="battle-stat"><%= t('total_win_rate') %>: <%= win_percentage(battle.p1_wins, battle.p1_losses) %>%</span>
+        <span class="battle-stat"><%= t('total_win_rate') %>: <%= win_percentage(battle.p2_wins, battle.p2_losses) %>%</span>
+      </div>
+      <div class="d-flex justify-content-between mb-1">
+        <span class="battle-stat">Elixir leaked: <%= battle.p1_elixir_leaked %></span>
+        <span class="battle-stat">Elixir leaked <%= battle.p2_elixir_leaked %></span>
+      </div>
+      <!-- Images -->
+      <div class="mb-1">
+        <div class="img-row">
+          <div class="row-left">
+            <% cards(battle.p1_cards).first(4).each do |card| %>
+              <span><img src="<%= card[:image_path] %>" alt="<%= card[:name] %>" class="img-fluid img-size"></span>
+            <% end %>
+          </div>
+          <div class="row-right">
+            <% cards(battle.p2_cards).first(4).each do |card| %>
+              <span><img src="<%= card[:image_path] %>" alt="<%= card[:name] %>" class="img-fluid img-size"></span>
+            <% end %>
+          </div>
+        </div>
+        <div class="img-row">
+          <div class="row-left">
+            <% cards(battle.p1_cards).last(4).each do |card| %>
+              <span><img src="<%= card[:image_path] %>" alt="<%= card[:name] %>" class="img-fluid img-size"></span>
+            <% end %>
+          </div>
+          <div class="row-right">
+            <% cards(battle.p2_cards).last(4).each do |card| %>
+              <span><img src="<%= card[:image_path] %>" alt="<%= card[:name] %>" class="img-fluid img-size"></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <!-- Bet Of User -->
+      <% unless hide_bet %>
+        <% if defined?(bet) && bet.present? %>
+          <% feedback_icon = bet.bet == 1 && battle.p1_crowns > battle.p2_crowns || bet.bet == 2 && battle.p2_crowns > battle.p1_crowns ? "Thumbs-Up_King.webp" : "Crying_King.webp" %>
+          <span class="center-container">
+          <%= image_tag feedback_icon, alt: (feedback_icon == "Thumbs-Up_King.webp" ? t('thumbs_up_king_emote') : t('crying_king_emote')), class: "feedback-icon" %>
+            <p><%= t('your_bet') %>: <%= bet.bet == 1 ? t('player_1') : t('player_2') %></p>
+            <p class="<%= feedback_icon == "Thumbs-Up_King.webp" ? "correct-bet" : "wrong-bet" %>"><%= t(feedback_icon == "Thumbs-Up_King.webp" ? 'correct_text' : 'not_correct_text') %>.</p>
+          </span>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
