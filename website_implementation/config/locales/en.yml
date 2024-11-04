@@ -1,0 +1,143 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  welcome: "Welcome To Clash Royale Bets"
+  join_us: "Join us and predict Clash Royale match outcomes."
+  mission: "Our Mission"
+  mission_text: "Our mission is to harness the power of machine learning to predict the outcomes of Clash Royale matches. We aim to analyze various factors like deck constellation, player ranks, and win rates to make accurate predictions. As a non-commercial platform, we are driven purely by the passion for the game and the pursuit of knowledge."
+  your_contribution: "Your Contribution"
+  contribution_text: "Your contribution is vital in this endeavor. By participating and making your own predictions on matches, you help us to evaluate the prediction accuracy of our models. Compete with others and see how well you can predict match outcomes."
+  bet_on_battles: "Bet On Battles"
+  sign_in: "Sign In"
+  faq_title: "Frequently Asked Questions"
+  faq_question1: "Is this an official website of Clash Royale?"
+  faq_answer1: "No, this is not an official site of Clash Royale. It is a platform created by an enthusiast of the game who is dedicated to conducting research and analysis on it. This site serves as a space for fellow fans to engage and predict match outcomes. This website operates independently and is not affiliated with or endorsed by the official Clash Royale game or its creators."
+  faq_question2: "Are there any prizes or rewards for participating?"
+  faq_answer2: "Currently, we do not offer any prizes or rewards for participation. Our platform is designed for the enjoyment of predicting match outcomes and contributing to the improvement of our prediction models."
+  faq_question3: "How are the matches to bet on selected?"
+  faq_answer3: "Matches available for betting are primarily sourced from the Clash Royale Developer API. We focus on retrieving matches involving players from the top 1000 clans across all regions on a regular basis. Additionally, we randomly fetch battle logs from various clans and players to ensure a diverse selection of matches for betting."
+  faq_question4: "How do I bet?"
+  faq_answer4: "To place a bet, first register for an account or log in if you're already a member. Then, navigate to the 'Bets' page where a randomly selected battle is displayed for betting. Before placing your bet, analyze the match. Consider factors such as the players' trophies, peak trophies, total win rate, and the cards they have. This information is available in the battle details. After your analysis, decide which player you think will win the match and place your bet on either Player 1 or Player 2. Submit your bet by clicking the corresponding button. Once your bet is submitted, a feedback message will appear below, confirming your bet and indicating the result of your prediction."
+  top_list: "Top list"
+  username: "Username"
+  correct_bets: "Correct bets"
+  user_profile: "User Profile"
+  edit_credentials: "Click to edit credentials"
+  your_bets: "Your Bets"
+  no_bets: "You haven't placed any bets yet."
+  total_bet_count: "Total Bet Count"
+  correct_bet_count: "Correct Bet Count"
+  accuracy_rate: "Accuracy Rate"
+  war_shield: "War Shield"
+  trophy: "Trophy"
+  player_1: "Player 1"
+  player_2: "Player 2"
+  trophies: "Trophies"
+  peak_trophies: "Peak Trophies"
+  total_win_rate: "Total win rate"
+  thumbs_up_king_emote: "Thumbs-Up King Emote"
+  crying_king_emote: "Crying King Emote"
+  your_bet: "Your bet"
+  correct: "correct"
+  not_correct: "not correct"
+  correct_text: "Your bet was correct"
+  not_correct_text: "Your bet was not correct"
+  all_battles: "All Battles"
+  no_battles_found: "No battles found."
+  your_stats: "Your Stats"
+  place_your_bet: "Place Your Bet"
+  no_more_battles: "There are no more battles left for you to bet on. Please check back later."
+  player_1_wins: "Player 1 Wins"
+  player_2_wins: "Player 2 Wins"
+  your_last_bet_was: "Your last bet was"
+  no_previous_bets_found: "No previous bets found."
+  faq: "FAQ"
+  terms_of_use: "Terms Of Use"
+  privacy_policy: "Privacy Policy"
+  clash_royale_bets: "Clash Royale Bets"
+  home: "Home"
+  battles: "Battles"
+  bets: "Bets"
+  profile: "Profile"
+  log_out: "Log Out"
+  log_in: "Log In"
+  contact-us: "Contact Us"
+  close: "Close"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
